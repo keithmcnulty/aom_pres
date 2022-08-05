@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Network Analysis in Organizational Design</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Academy of Management Conference" />
+    <meta name="date" content="2022-08-09" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <meta name="description" content="Presented at Academy of Management Conference, Seattle 2022"/>
+    <meta name="twitter:title" content="Network Analysis in Organizational Design"/>
+    <meta name="twitter:description" content="Presented at Academy of Management Conference, Seattle 2022"/>
+    <meta name="twitter:url" content="https://aom2022.keithmcnulty.org"/>
+    <meta name="twitter:image" content="https://aom2022.keithmcnulty.org/cover.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="dr_keithmcnulty"/>
+    <meta name="twitter:site" content="dr_keithmcnulty"/>
+    <meta property="og:title" content="Network Analysis in Organizational Design"/>
+    <meta property="og:description" content="Presented at Academy of Management Conference, Seattle 2022"/>
+    <meta property="og:url" content="https://aom2022.keithmcnulty.org"/>
+    <meta property="og:image" content="https://aom2022.keithmcnulty.org/cover.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <script src="libs/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="libs/animate.css-xaringan/animate.fade.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+
+
+class: left title-slide no-animation
+background-image: url('nasa.jpg')
+background-size: cover
+background-position: top center
+
+[medium-km]: https://keith-mcnulty.medium.com
+[dr_km]: https://twitter.com/dr_keithmcnulty
+[km]: https://www.linkedin.com/in/keith-mcnulty/
+
+# Network Analysis in Organizational Design
+
+.title-where[
+Academy of Management Conference -  August 9, 2022
+]
+
+&lt;style type="text/css"&gt;
+@keyframes title-text{
+    0% {
+        opacity: 0;
+        text-shadow: -20px 30px 5px rgba(0,0,0,0.25);
+        transform: translate(15px, -15px);
+    }
+    10% {
+        opacity: 0;
+        text-shadow: -20px 30px 5px rgba(0,0,0,0.25);
+        transform: translate(15px, -15px);
+    }
+    80% {
+        opacity: 1;
+        text-shadow: -5px 5px 10px rgba(0,0,0,0.25);
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: -5px 5px 10px rgba(0,0,0,0.25);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes enter-right {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-50px)
+  }
+  20% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-50px)
+  }
+  80% {
+    opacity: 1;
+    transform: rotate(90deg) translateY(0)
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(90deg) translateY(0)
+  }
+}
+
+@keyframes enter-left {
+  0% {
+    opacity: 0;
+    transform: translateY(100px)
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(100px)
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.title-slide h1 {
+	font-size: 50px;
+	font-family: Jost, sans;
+	animation-name: title-text;
+	animation-duration: 13s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+.side-text {
+	color: white;
+  opacity: 0.66;
+	transform: rotate(90deg);
+	position: absolute;
+  font-size: 20px;
+	top: 130px;
+	right: -130px;
+  transition: opacity 0.5s ease-in-out;
+	animation-name: enter-right;
+	animation-duration: 13s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+.side-text:hover {
+  opacity: 1;
+}
+
+.side-text a {
+  color: white;
+}
+
+.title-where {
+	color: white;
+	font-family: Jost, sans;
+	font-size: 30px;
+	position: relative;
+	top: -30px;
+	animation-name: enter-left;
+	animation-duration: 13s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+&lt;/style&gt;
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: blue;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+---
+class: left, middle
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(https://higherlogicdownload.s3.amazonaws.com/AOM/b86d0d96-0525-46fd-9622-7a21331458fa/UploadedImages/TIM/_AOMLogo-ReverseWithKnockOutType-8.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+## McKinsey &amp; Company US, 2019
+
+.f3[
+&amp;#127482;&amp;#127480; Organized into five regional centers or 'complexes': Northeast, Mid-Atlantic, South, Midwest, West Coast 
+]
+
+.f3[
+&amp;#127482;&amp;#127480; Organization had grown into this shape from the early days of the company.  Common wisdom was that it made sense.
+]
+
+.f3[
+&amp;#127482;&amp;#127480; Question raised: *What drives collaboration between our people?*]
+
+.f3[
+&amp;#127482;&amp;#127480; Answer:  Other things are more important than physical location.
+]
+
+.f3[
+&amp;#127482;&amp;#127480; Consequence:  Abolition of regional structure, integration into a single United States practice.
+]
+
+---
+class: left, middle
+
+## Analytic method
+
+1. Created metrics of connection between 1,000+ sampled consultants
+2. Created a network graph based on these measures
+3. Used a community detection algorithm (the Leiden algorithm) to break the graph into distinct communities of more densely interacting groups.
+4. Analyzed groups by key descriptive demographics to see how they were best described.
+5. Used visualization methods to demonstrate conclusions in the most compelling way
+
+---
+class: left, middle
+
+## The original graph
+
+&lt;img src="plain_graph.png" width="1165" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+class: left, middle
+
+## Graph by location
+
+&lt;img src="graph_loc.png" width="1165" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+class: left, middle
+
+## Graph by Leiden community
+
+&lt;img src="graph_comm.png" width="1165" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+class: left, middle
+
+## Community characteristics
+
+&lt;img src="overlap_heatmap.png" width="1165" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+class: left, middle
+
+## Assortativity and Modularity
+
+Assortativity is a mathematical measure of how likely two vertices are to be connected based on a shared characteristic.  Modularity is a measure of the accuracy of a community structure.
+
+
+|Characteristic   | Assortativity| Modularity|
+|:----------------|-------------:|----------:|
+|Location         |          0.07|       0.13|
+|Industry         |          0.23|       0.37|
+|Leiden Community |          0.29|       0.45|
+
+---
+class: left, middle
+
+## Compellingly illustrating community
+
+&lt;img src="leiden1.gif" style="display: block; margin: auto;" /&gt;
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"ratio": "16:9",
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
